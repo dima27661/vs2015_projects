@@ -1,1 +1,10 @@
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\ComPort\ComPort\bin\Debug\ComPort.exe.config
+D:\projects\vs2015\ComPort\ComPort\bin\Debug\ComPort.exe.config
+D:\projects\vs2015\ComPort\ComPort\obj\Debug\ComPort.csprojResolveAssemblyReference.cache
+D:\projects\vs2015\ComPort\ComPort\obj\Debug\WindowsFormsApplication3.Form1.resources
+D:\projects\vs2015\ComPort\ComPort\obj\Debug\ComPort.Properties.Resources.resources
+D:\projects\vs2015\ComPort\ComPort\obj\Debug\ComPort.csproj.GenerateResource.Cache
+D:\projects\vs2015\ComPort\ComPort\bin\Debug\ComPort.exe
+D:\projects\vs2015\ComPort\ComPort\bin\Debug\ComPort.pdb
+D:\projects\vs2015\ComPort\ComPort\obj\Debug\ComPort.exe
+D:\projects\vs2015\ComPort\ComPort\obj\Debug\ComPort.pdb

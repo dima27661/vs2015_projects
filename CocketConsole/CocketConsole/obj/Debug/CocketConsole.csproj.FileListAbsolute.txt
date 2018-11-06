@@ -1,1 +1,2 @@
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\CocketConsole\CocketConsole\bin\Debug\CocketConsole.exe.config
+D:\projects\vs2015\CocketConsole\CocketConsole\bin\Debug\CocketConsole.exe.config
