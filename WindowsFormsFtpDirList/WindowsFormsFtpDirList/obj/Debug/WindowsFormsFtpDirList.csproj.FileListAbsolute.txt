@@ -1,0 +1,9 @@
+c:\users\администратор\documents\visual studio 2015\Projects\WindowsFormsFtpDirList\WindowsFormsFtpDirList\bin\Debug\WindowsFormsFtpDirList.exe.config
+c:\users\администратор\documents\visual studio 2015\Projects\WindowsFormsFtpDirList\WindowsFormsFtpDirList\bin\Debug\WindowsFormsFtpDirList.exe
+c:\users\администратор\documents\visual studio 2015\Projects\WindowsFormsFtpDirList\WindowsFormsFtpDirList\bin\Debug\WindowsFormsFtpDirList.pdb
+c:\users\администратор\documents\visual studio 2015\Projects\WindowsFormsFtpDirList\WindowsFormsFtpDirList\obj\Debug\WindowsFormsFtpDirList.csprojResolveAssemblyReference.cache
+c:\users\администратор\documents\visual studio 2015\Projects\WindowsFormsFtpDirList\WindowsFormsFtpDirList\obj\Debug\WindowsFormsFtpDirList.Form1.resources
+c:\users\администратор\documents\visual studio 2015\Projects\WindowsFormsFtpDirList\WindowsFormsFtpDirList\obj\Debug\WindowsFormsFtpDirList.Properties.Resources.resources
+c:\users\администратор\documents\visual studio 2015\Projects\WindowsFormsFtpDirList\WindowsFormsFtpDirList\obj\Debug\WindowsFormsFtpDirList.csproj.GenerateResource.Cache
+c:\users\администратор\documents\visual studio 2015\Projects\WindowsFormsFtpDirList\WindowsFormsFtpDirList\obj\Debug\WindowsFormsFtpDirList.exe
+c:\users\администратор\documents\visual studio 2015\Projects\WindowsFormsFtpDirList\WindowsFormsFtpDirList\obj\Debug\WindowsFormsFtpDirList.pdb

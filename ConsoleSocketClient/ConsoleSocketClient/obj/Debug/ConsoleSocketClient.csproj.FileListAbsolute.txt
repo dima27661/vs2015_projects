@@ -1,0 +1,6 @@
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\ConsoleSocketClient\ConsoleSocketClient\bin\Debug\ConsoleSocketClient.exe.config
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\ConsoleSocketClient\ConsoleSocketClient\bin\Debug\ConsoleSocketClient.exe
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\ConsoleSocketClient\ConsoleSocketClient\bin\Debug\ConsoleSocketClient.pdb
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\ConsoleSocketClient\ConsoleSocketClient\obj\Debug\ConsoleSocketClient.exe
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\ConsoleSocketClient\ConsoleSocketClient\obj\Debug\ConsoleSocketClient.pdb
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\ConsoleSocketClient\ConsoleSocketClient\obj\Debug\ConsoleSocketClient.csprojResolveAssemblyReference.cache
