@@ -10,7 +10,7 @@ namespace ComPort
     static class Program
     {
         /// <summary>
-        /// Главная точка входа для приложения.
+        /// Главная точка входа для приложения поменял и залил из svn.
         /// </summary>
         [STAThread]
         static void Main()
