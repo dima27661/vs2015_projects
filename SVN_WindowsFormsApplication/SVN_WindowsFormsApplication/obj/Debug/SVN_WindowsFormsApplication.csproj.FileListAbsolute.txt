@@ -1,0 +1,12 @@
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\bin\Debug\SVN_WindowsFormsApplication.exe.config
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\obj\Debug\SVN_WindowsFormsApplication.Form1.resources
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\obj\Debug\SVN_WindowsFormsApplication.Properties.Resources.resources
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\obj\Debug\SVN_WindowsFormsApplication.csproj.GenerateResource.Cache
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\bin\Debug\SVN_WindowsFormsApplication.exe
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\bin\Debug\SVN_WindowsFormsApplication.pdb
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\bin\Debug\SharpSvn.dll
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\bin\Debug\SharpSvn.pdb
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\bin\Debug\SharpSvn.xml
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\bin\Debug\SharpPlink-x64.svnExe
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\obj\Debug\SVN_WindowsFormsApplication.exe
+D:\owncloud_my\projects\c#\SVN_WindowsFormsApplication\SVN_WindowsFormsApplication\obj\Debug\SVN_WindowsFormsApplication.pdb
