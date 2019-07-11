@@ -8,3 +8,12 @@ D:\projects\vs2015\ComPort\ComPort\bin\Debug\ComPort.exe
 D:\projects\vs2015\ComPort\ComPort\bin\Debug\ComPort.pdb
 D:\projects\vs2015\ComPort\ComPort\obj\Debug\ComPort.exe
 D:\projects\vs2015\ComPort\ComPort\obj\Debug\ComPort.pdb
+D:\temp\git-svn\trunk\ComPort\ComPort\bin\Debug\ComPort.exe.config
+D:\temp\git-svn\trunk\ComPort\ComPort\obj\Debug\ComPort.exe
+D:\temp\git-svn\trunk\ComPort\ComPort\obj\Debug\ComPort.pdb
+D:\temp\git-svn\trunk\ComPort\ComPort\bin\Debug\ComPort.exe
+D:\temp\git-svn\trunk\ComPort\ComPort\bin\Debug\ComPort.pdb
+D:\temp\git-svn\trunk\ComPort\ComPort\obj\Debug\ComPort.csprojResolveAssemblyReference.cache
+D:\temp\git-svn\trunk\ComPort\ComPort\obj\Debug\WindowsFormsApplication3.Form1.resources
+D:\temp\git-svn\trunk\ComPort\ComPort\obj\Debug\ComPort.Properties.Resources.resources
+D:\temp\git-svn\trunk\ComPort\ComPort\obj\Debug\ComPort.csproj.GenerateResource.Cache
