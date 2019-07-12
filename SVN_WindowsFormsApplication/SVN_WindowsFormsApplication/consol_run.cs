@@ -30,6 +30,139 @@ namespace SvnClient
             }
         }
 
+        public static string GetLogText(string[] args, string revision)
+        {
+            Parameters parameters;
+            if (!Parameters.TryParse(args, out parameters))
+            {
+                return "False";
+            }
+
+            using (var client = new SharpSvn.SvnClient())
+            {
+                SetUpClient(parameters, client);
+
+                var target = SvnTarget.FromString(parameters.Path);
+                SvnInfoEventArgs svnInfoEventArgs;
+                SvnUpdateResult svnUpdateResult;
+
+                if (!client.GetInfo(target, out svnInfoEventArgs))
+                {
+                    throw new Exception("SVN info failed");
+                }
+
+                 Uri svnUrl =  svnInfoEventArgs.Uri ;
+                long revisionLong = long.Parse(revision);
+                SvnLogArgs Logargs = new SvnLogArgs
+                {
+                    Range = new SvnRevisionRange(938, revisionLong)
+                };
+                Collection<SvnLogEventArgs> logItems;
+                client.GetLog(svnUrl, Logargs, out logItems);
+                return logItems[0].Author + logItems[0].LogMessage;
+
+
+                //update to revision
+
+                //DebugMessage(parameters, "Updating");
+                //SvnUpdateArgs SvnArgs = new SvnUpdateArgs();
+                //// If args.Revision is not set, it defaults to fetch the HEAD revision.
+                //    SvnArgs.Revision = 4756;
+                //    if (client.Update(parameters.Path, SvnArgs, out svnUpdateResult))
+                //{
+                //    DebugMessage(parameters, "Done");
+                //    Console.WriteLine("Updated to r" + svnUpdateResult.Revision);
+                //    return "";
+                //}
+
+
+                throw new Exception("SVN update failed");
+            }
+
+
+
+
+
+
+
+            return "jhgjg";
+
+        }
+        public static string GetInfo(string[] args, string revision)
+        {
+            Parameters parameters;
+            if (!Parameters.TryParse(args, out parameters))
+            {
+                return "False";
+            }
+
+            using (var client = new SharpSvn.SvnClient())
+            {
+                SetUpClient(parameters, client);
+
+                var target = SvnTarget.FromString(parameters.Path);
+                SvnInfoEventArgs svnInfoEventArgs;
+                SvnUpdateResult svnUpdateResult;
+
+                if (!client.GetInfo(target, out svnInfoEventArgs))
+                {
+                    throw new Exception("SVN info failed");
+                }
+
+                Uri svnUrl = svnInfoEventArgs.Uri;
+                return "Revision=" + svnInfoEventArgs.Revision.ToString() + " "  ; 
+                    //+ logItems[0].LogMessage;
+
+
+
+
+                throw new Exception("SVN update failed");
+            }
+            return "jhgjg";
+        }
+        public static string UpdateToRevision(string[] args, string revision)
+        {
+            Parameters parameters;
+            if (!Parameters.TryParse(args, out parameters))
+            {
+                return "False";
+            }
+
+            using (var client = new SharpSvn.SvnClient())
+            {
+                SetUpClient(parameters, client);
+
+                var target = SvnTarget.FromString(parameters.Path);
+                SvnInfoEventArgs svnInfoEventArgs;
+                SvnUpdateResult svnUpdateResult;
+
+                if (!client.GetInfo(target, out svnInfoEventArgs))
+                {
+                    throw new Exception("SVN info failed");
+                }
+
+                Uri svnUrl = svnInfoEventArgs.Uri;
+                long revisionLong = long.Parse(revision);
+
+
+                //update to revision
+
+                //DebugMessage(parameters, "Updating");
+                SvnUpdateArgs SvnArgs = new SvnUpdateArgs();
+                //// If args.Revision is not set, it defaults to fetch the HEAD revision.
+                    SvnArgs.Revision = revisionLong;
+                if (client.Update(parameters.Path, SvnArgs, out svnUpdateResult))
+                {
+                    DebugMessage(parameters, "Done");
+                    Console.WriteLine("Updated to r" + svnUpdateResult.Revision);
+                    return "";
+                }
+                throw new Exception("SVN update failed");
+            }
+            return "jhgjg";
+        }
+
+
         private static void CheckoutUpdate(Parameters parameters)
         {
             using (var client = new SharpSvn.SvnClient())

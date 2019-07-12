@@ -8,7 +8,7 @@ namespace SvnClient
     {
         UnknownDefaultThingy,
         CompleteSync,
-        CheckoutUpdate,
+        CheckoutUpdate
     }
 
     public class Parameters
