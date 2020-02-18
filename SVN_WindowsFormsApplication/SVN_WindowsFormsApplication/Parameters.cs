@@ -81,6 +81,16 @@ namespace SvnClient
                         return false;
                     }
                     p.Path = extraArgs[1];
+
+                    //костыль
+                    if (p.Path.IndexOf("--message=") == 0)
+
+                    {
+                        p.Path = extraArgs[2];
+                        p.Message = extraArgs[1];
+                    }
+
+
                     break;
                 case Command.CheckoutUpdate:
                     if(extraArgs.Count < 3)

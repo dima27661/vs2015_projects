@@ -4,6 +4,7 @@ using System.Net;
 using SharpSvn;
 using System.Collections.ObjectModel;
 
+
 namespace SvnClient
 {
     class Program
@@ -17,7 +18,13 @@ namespace SvnClient
             if (!Parameters.TryParse(args, out parameters))
             {   
                 return;
-            }   
+            }
+            //костыль
+            //if (parameters.Path.IndexOf("--message=") > 0)
+
+            //{
+            //    parameters.Path = args[2];
+            //    parameters.Path = args[2];   }
 
             switch (parameters.Command)
             {
@@ -30,12 +37,12 @@ namespace SvnClient
             }
         }
 
-        public static string GetLogText(string[] args, string revision)
+        public static string GetLogText(string[] args, string revision,  out Collection<SvnLogEventArgs> logItemsColl)
         {
             Parameters parameters;
             if (!Parameters.TryParse(args, out parameters))
             {
-                return "False";
+                throw new Exception("TryParse failed");
             }
 
             using (var client = new SharpSvn.SvnClient())
@@ -53,28 +60,28 @@ namespace SvnClient
 
                  Uri svnUrl =  svnInfoEventArgs.Uri ;
                 long revisionLong = long.Parse(revision);
+
+                long revisionLongTo =  svnInfoEventArgs.Revision;
+
+
                 SvnLogArgs Logargs = new SvnLogArgs
                 {
-                    Range = new SvnRevisionRange(938, revisionLong)
+                    Range = new SvnRevisionRange(revisionLong, revisionLongTo)
                 };
                 Collection<SvnLogEventArgs> logItems;
-                client.GetLog(svnUrl, Logargs, out logItems);
-                return logItems[0].Author + logItems[0].LogMessage;
+               //  client.GetLog(svnUrl, Logargs, out logItems);
+                client.GetLog(svnUrl,  out logItemsColl);
+
+                string AlllogText="";
+                for (int i = logItemsColl.Count-1 ; i > 0; i--)
+                {
+                    AlllogText = AlllogText + (Char)13 + (Char)10 +
+                      logItemsColl[i].Revision.ToString() + " " + logItemsColl[i].Time.ToString() + " " + logItemsColl[i].LogMessage   ;
+                }
 
 
-                //update to revision
 
-                //DebugMessage(parameters, "Updating");
-                //SvnUpdateArgs SvnArgs = new SvnUpdateArgs();
-                //// If args.Revision is not set, it defaults to fetch the HEAD revision.
-                //    SvnArgs.Revision = 4756;
-                //    if (client.Update(parameters.Path, SvnArgs, out svnUpdateResult))
-                //{
-                //    DebugMessage(parameters, "Done");
-                //    Console.WriteLine("Updated to r" + svnUpdateResult.Revision);
-                //    return "";
-                //}
-
+                return AlllogText;
 
                 throw new Exception("SVN update failed");
             }
@@ -108,13 +115,8 @@ namespace SvnClient
                 {
                     throw new Exception("SVN info failed");
                 }
-
                 Uri svnUrl = svnInfoEventArgs.Uri;
-                return "Revision=" + svnInfoEventArgs.Revision.ToString() + " "  ; 
-                    //+ logItems[0].LogMessage;
-
-
-
+                return svnInfoEventArgs.Revision.ToString(); 
 
                 throw new Exception("SVN update failed");
             }
@@ -154,8 +156,9 @@ namespace SvnClient
                 if (client.Update(parameters.Path, SvnArgs, out svnUpdateResult))
                 {
                     DebugMessage(parameters, "Done");
+
                     Console.WriteLine("Updated to r" + svnUpdateResult.Revision);
-                    return "";
+                    return "true";
                 }
                 throw new Exception("SVN update failed");
             }
@@ -405,5 +408,72 @@ namespace SvnClient
                 Console.WriteLine(string.Format(format, args));
             }
         }
+        public static void Diff_ReposDiff(string[] args, long Rev1, long Rev2 )
+        {
+            //string clientDiff = this.RunCommand("svn", "diff -r 1:5 " + this.ReposUrl);
+
+            MemoryStream outstream = new MemoryStream();
+            MemoryStream errstream = new MemoryStream();
+
+            SvnDiffArgs a = new SvnDiffArgs();
+
+            Parameters parameters;
+            if (!Parameters.TryParse(args, out parameters))
+            {
+                return;
+            }
+
+            using (var client = new SharpSvn.SvnClient())
+            {
+                SetUpClient(parameters, client);
+
+                var target = SvnTarget.FromString(parameters.Path);
+                SvnInfoEventArgs svnInfoEventArgs;
+                SvnUpdateResult svnUpdateResult;
+
+                if (!client.GetInfo(target, out svnInfoEventArgs))
+                {
+                    throw new Exception("SVN info failed");
+                }
+
+                Uri svnUrl = svnInfoEventArgs.Uri;
+
+                a.ErrorStream = errstream;
+                
+                try
+                {
+                 client.Diff(target, new SvnRevisionRange(Rev1, Rev2), a, outstream);
+                }
+
+                catch (Exception)
+                {
+                    throw new Exception("SVN diff failed");
+                 //  return ;
+                }
+
+
+                return ;
+
+               
+            }
+
+
+
+
+            //string err = Encoding.Default.GetString(errstream.ToArray());
+            //Assert.That(err, Is.EqualTo(string.Empty), "Error in diff: " + err);
+
+            //string apiDiff = Encoding.Default.GetString(outstream.ToArray());
+            //string[] clientLines = clientDiff.Split('\n');
+            //string[] apiLines = apiDiff.Split('\n');
+            //Array.Sort<string>(clientLines);
+            //Array.Sort<string>(apiLines);
+
+            //Assert.That(apiLines, Is.EqualTo(clientLines), "Diffs differ");
+        }
+
+
+
+
     }
 }
