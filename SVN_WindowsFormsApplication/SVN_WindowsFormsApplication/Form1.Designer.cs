@@ -62,7 +62,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 38);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Commit";
+            this.button1.Text = "Step 5.Commit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -72,14 +72,14 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(897, 434);
+            this.textBox2.Size = new System.Drawing.Size(619, 434);
             this.textBox2.TabIndex = 2;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(186, 514);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 39);
+            this.button2.Size = new System.Drawing.Size(146, 39);
             this.button2.TabIndex = 3;
             this.button2.Text = "Step 1.   get log";
             this.button2.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(619, 515);
+            this.button3.Location = new System.Drawing.Point(454, 514);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 36);
             this.button3.TabIndex = 4;
@@ -97,16 +97,16 @@
             // 
             // TextNextRevision
             // 
-            this.TextNextRevision.Location = new System.Drawing.Point(619, 483);
+            this.TextNextRevision.Location = new System.Drawing.Point(454, 480);
             this.TextNextRevision.Name = "TextNextRevision";
-            this.TextNextRevision.Size = new System.Drawing.Size(220, 20);
+            this.TextNextRevision.Size = new System.Drawing.Size(122, 20);
             this.TextNextRevision.TabIndex = 5;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(406, 513);
+            this.button4.Location = new System.Drawing.Point(338, 510);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(196, 43);
+            this.button4.Size = new System.Drawing.Size(110, 43);
             this.button4.TabIndex = 6;
             this.button4.Text = "Step 2.  getinfo";
             this.button4.UseVisualStyleBackColor = true;
@@ -116,13 +116,13 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(190, 443);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 20);
+            this.textBox3.Size = new System.Drawing.Size(142, 20);
             this.textBox3.TabIndex = 7;
             this.textBox3.Text = "C:\\\\projects\\\\profit_dc";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(804, 443);
+            this.button5.Location = new System.Drawing.Point(582, 469);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(92, 37);
             this.button5.TabIndex = 8;
@@ -132,15 +132,15 @@
             // 
             // TextCurrentRevision
             // 
-            this.TextCurrentRevision.Location = new System.Drawing.Point(406, 483);
+            this.TextCurrentRevision.Location = new System.Drawing.Point(338, 480);
             this.TextCurrentRevision.Name = "TextCurrentRevision";
-            this.TextCurrentRevision.Size = new System.Drawing.Size(196, 20);
+            this.TextCurrentRevision.Size = new System.Drawing.Size(110, 20);
             this.TextCurrentRevision.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 467);
+            this.label1.Location = new System.Drawing.Point(338, 462);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 10;
@@ -149,7 +149,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(664, 465);
+            this.label2.Location = new System.Drawing.Point(465, 462);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 13);
             this.label2.TabIndex = 11;
@@ -157,17 +157,17 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(902, 446);
+            this.button6.Location = new System.Drawing.Point(582, 513);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(108, 37);
             this.button6.TabIndex = 12;
-            this.button6.Text = "SynkFolder";
+            this.button6.Text = "Step 4. SynkFolder";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(760, 516);
+            this.button7.Location = new System.Drawing.Point(696, 515);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(105, 35);
             this.button7.TabIndex = 13;
@@ -179,7 +179,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(190, 469);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 20);
+            this.textBox4.Size = new System.Drawing.Size(142, 20);
             this.textBox4.TabIndex = 14;
             this.textBox4.Text = "C:\\\\svn\\\\profitdc_to";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 559);
+            this.ClientSize = new System.Drawing.Size(812, 559);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
